@@ -1,0 +1,2 @@
+Put Thermo raw files in this folder.  
+The .raw files will be converted to the mzXML format using Proteowizard's MSConvert tool

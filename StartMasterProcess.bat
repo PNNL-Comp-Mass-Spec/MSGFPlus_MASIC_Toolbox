@@ -10,7 +10,7 @@ set LogFilePath=%LogFolder%\ProcessingLog_%mydate%_%mytime%.txt
 echo Log File Path: %LogFilePath%
 
 echo Running MSConvert and MSGF+
-rem call Step1_ProcessDatasetsMSGFPlus.bat > %LogFilePath%
+call Step1_ProcessDatasetsMSGFPlus.bat > %LogFilePath%
 
 echo Running MASIC
 call Step2_RunMasic.bat >> %LogFilePath%
@@ -21,5 +21,4 @@ call Step3_RunPHRP.bat >> %LogFilePath%
 echo Merging MASIC and PHRP Results
 call Step4_MergeMSGFPlusAndMasic.bat >> %LogFilePath%
 
-echo Combining all merged results
-call Step5_Combine_MSGFPlusWithMasic_Files.bat >> %LogFilePath%
+pause

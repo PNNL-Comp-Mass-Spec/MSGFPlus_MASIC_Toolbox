@@ -1,0 +1,19 @@
+Put FASTA files in this folder.  Example fasta file format:
+
+>Contaminant_TRYP_PIG sp|P00761|TRYP_PIG Trypsin precursor (EC 3.4.21.4) - Sus scrofa (Pig).
+FPTDDDDKIVGGYTCAANSIPYQVSLNSGSHFCGGSLINSQWVVSAAHCYKSRIQVRLGE
+HNIDVLEGNEQFINAAKIITHPNFNGNTLDNDIMLIKLSSPATLNSRVATVSLPRSCAAA
+GTECLISGWGNTKSSGSSYPSLLQCLKAPVLSDSSCKSSYPGQITGNMICVGFLEGGKDS
+CQGDSGGPVVCNGQLQGIVSWGYGCAQKNKPGVYTKVCNYVNWIQQTIAAN
+>Contaminant_Trypa1 VATVSLPR-like Promega trypsin artifact 1 (871.1) xATVSLPR (PromTArt1)
+QATVSLPR
+>Contaminant_Trypa2 VATVSLPR-like Promega trypsin artifact 2 (899.5) xxTVSLPR (PromTArt2)
+VQTVSLPR
+>Contaminant_Trypa3 VATVSLPR-like Promega trypsin artifact 3 (824.5) xxxVSLPR (PromTArt3)
+PGVVSLPR
+>Contaminant_Trypa4 LSSPATLNSR-like Promega trypsin artifact 4 (1071.5) xxxPATLNSR (PromTArt4)
+MNTLPLLAAK
+>Contaminant_Trypa5 Promega trypsin artifact 5 K to R mods (2239.1, 2914)(1987, 2003) (PromTArt5)
+LGEHNIDVLEGNEQFINAARIITHPNFNGNTLDNDIMLIRLSSPATLNSR
+>Contaminant_Trypa6 VATVSLPR 422 ion wrongly assigned z=3 (1262.8) (llhg are dummy aa's) (TrypArt6)
+LLHGVATVSLPR

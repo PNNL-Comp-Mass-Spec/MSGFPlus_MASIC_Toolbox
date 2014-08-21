@@ -1,0 +1,246 @@
+Peptide Hit Results Proc Runner Revision History
+
+Version 1.5.5255; May 22, 2014
+	- Fixed bug tracking NTerm and CTerm mod masses from MODa parameter files
+
+Version 1.5.5225; April 23, 2014
+	- Added support for results from MODa
+
+Version 1.5.5198; March 26, 2014
+	- New versions of dependent DLLs, including PHRPReader.dll
+	- Added MSGFPlus_Example_Data.zip to the installer
+
+Version 1.5.5168; February 24, 2014
+	- New version of PeptideHitResultsProcessor.dll
+
+Version 1.5.5150; February 6, 2014
+	- New version of PHRPReader.dll
+
+Version 1.5.5142; January 29, 2014
+	- Added 64-bit version
+	- New version of PHRPReader.dll
+	- Resharper code cleanup
+
+Version 1.5.5072; November 20, 2013
+	- New versions of PHRPReader.dll, ProteinCoverageSummarizer.dll, and PeptideToProteinMapEngine.dll
+
+Version 1.5.5050; October 29, 2013
+	- New version of ThermoRawFileReaderDLL
+
+Version 1.5.4927; June 28, 2013
+	- Now using String.IsNullOrWhiteSpace
+
+Version 1.5.4926; June 27, 2013
+	- Updated default Mass Correction Tags
+	- Now comparing DelM_PPM value computed by MSGF+ with the search tolerances used
+		- If the computed value is more than 1.5 fold larger than the search tolerances, then a new DelM_PPM value is computed
+		- This change was prompted by Analysis Job 957459
+
+Version 1.5.4841; April 3, 2013
+	- Added MSAlign columns Species_ID and FragMethod
+
+Version 1.5.4821; March 14, 2013
+	- Updated modMain to latest standard format
+
+Version 1.5.4734; December 17, 2012
+	- MSGF+ static mod bug fix
+
+Version 1.5.4730; December 13, 2012
+	- Now skipping the ProteinMods step if the FASTA file contains nucleic acids instead of amino acids
+
+Version 1.5.4727; December 10, 2012
+	- Replaced Char.IsLetter() calls with a RegEx that matches [A-Za-z]
+
+Version 1.5.4723; December 6, 2012
+	- Now naming new, unknown modifications using the modification mass instead of using UnkMod01, UnkMod02, etc.
+
+Version 1.5.4721; December 4, 2012
+	- Now assuring that the various Count columns in MSAlign results contain integers
+
+Version 1.5.4720; December 3, 2012
+	- Added support for results from MSAlign v0.5
+
+Version 1.5.4716; November 29, 2012
+	- Added support for MSGF+ results with semicolon-separated protein names
+	- Now supports adding over 100 unknown mods
+
+Version 1.5.4715; November 28, 2012
+	- Added support for MSAlign results
+
+Version 1.5.4714; November 27, 2012
+	- Added support for MSGF+ results
+	- New versions of PeptideToProteinMapEngine.DLL, PHRPReader.DLL, and ProteinCoverageSummarizer.DLL to support MSGF+ column names
+
+Version 1.5.4681; October 25, 2012
+	- Added several new switches to support creating a _ProteinMods.txt file with details on modified residues for each protein
+
+Version 1.4.4619; August 24, 2012
+	- Added support for columns IMS_Scan and IMS_Drift_Time in MSGFDB search results
+	- New version of PHRPReader
+
+Version 1.4.4512; May 9, 2012
+	- Now posting error messages to the error stream
+
+Version 1.4.4511; May 8, 2012
+	- New version of PeptideHitResultsProcessor that adds support for the EFDR column in MSGFDB results
+		- This column is included if a target/decoy search is not run and if MSGFDB is instructed to just write out the top hit for each spectrum
+		- Reported in the _msgfdb_syn.txt file under the FDR column (the PepFDR column will show 1 for every record in this case)
+
+Version 1.4.4504; May 1, 2012
+	- Now looking for the search engine parameter file and ModDefs file in the same folder as the input folder if not found in the working directory
+	- New version of PeptideHitResultsProcessor
+
+Version 1.4.4500; April 27, 2012
+	- Removed duplicated classes from PeptideHitResultsProcessor
+	- Now skipping synopsis-specific SeqInfo files when parsing a first-hits file with the PHRPReader
+
+Version 1.4.4499; April 26, 2012
+	- New version of PHRPReader.dll that uses ThermoRawFileReaderDLL.dll
+
+Version 1.4.4497; April 24, 2012
+	- Updated NumToString to correctly handle intDigitsOfPrecision
+	- PeptideHitResultsProcessor now depends on PHRPReader 
+
+Version 1.4.4496; April 23, 2012
+	- New version of PeptideHitResultsProcessor
+
+Version 1.4.4349; November 28, 2011
+	- Now writing out a separate entry to the synopsis or first-hits file for each scan involved in a merged result reported by MSGFDB
+	- Now creating a ScanGroupInfo.txt file when MSGFDB merged spectra are processed
+
+Version 1.4.4342; November 21, 2011
+	- Updated to support MSGFDB search results with merged spectra (scan numbers of the form 3010/3011/3012)
+
+Version 1.4.4293; October 3, 2011
+	- New version of PeptideHitResultsProcessor.dll
+		- Fixes bug that incorrectly computed Rank_MSGFDB_SpecProb as 2 for the final entry in the MSGFDB results file
+
+Version 1.4.4286; September 26, 2011
+	- Updated program syntax
+
+Version 1.4.4268; September 8, 2011
+	- Fixed tryptic state computation bug when processing MSGFDB results
+
+Version 1.4.4267; September 7, 2011
+	- Renamed column headers in the MSGFDB synopsis and first-hits file
+
+Version 1.4.4257; August 29, 2011
+	- New version of PeptideHitResultsProcessor.dll
+		- Fixed mass computation bug for MSGFDB results with static mods
+
+Version 1.4.4252; August 23, 2011
+	- New version of PeptideHitResultsProcessor.dll
+		- Now reads/writes columns FDR and pepFDR for MSGFDB results
+
+Version 1.4.4247; August 18, 2011
+	- New version of PeptideHitResultsProcessor.dll
+		- Added support for MSGFDB results
+		- Now reading the column headers from Sequest and Inspect _syn.txt files
+		- X!Tandem _xt.txt files and Inspect _syn.txt and _fht.txt files now have column DelM_PPM
+		- The MH column in Inspect _syn.txt and _fht.txt files is now (M+H)+ instead of uncharged monoisotopic mass
+
+Version 1.4.4239; August 10, 2011
+	- Updated to Visual Studio 2010
+	- Added command line switches /InsFHT and /InsSyn
+
+Version 1.3.3855; July 22, 2010
+	- New version of PeptideHitResultsProcessor.dll
+		- Removed dependence on AnalysisManagerProg.exe
+
+Version 1.3.3841; July 8, 2010
+	- Now supports specifying the input filename without using /I:
+
+Version 1.3.3827; June 24, 2010
+	- Added support for specifying the log file name when using /L 
+
+Version 1.3.3597; November 6, 2009
+	- New version of PeptideHitResultsProcessor.dll
+
+Version 1.3.3562; October 2, 2009
+	- Now returning False if unknown modification symbols are found when processing Sequest results
+
+Version 1.3.3561; October 1, 2009
+	- New version of PeptideHitResultsProcessor.dll
+
+Version 1.3.3455; June 17, 2009
+	- New version of PeptideHitResultsProcessor.dll that uses AnalysisManagerProg.exe instead of PRISM.Dll
+
+Version 1.2.3295; January 8, 2009
+	- PeptideHitResultsProcessor.dll has updated Inspect support
+
+Version 1.2.3294; January 7, 2009
+	- PeptideHitResultsProcessor.dll has updated Inspect support and additional debugging
+
+Version 1.2.3265; December 9, 2008
+	- Improved support for N-terminal and C-terminal Inspect modifications
+
+Version 1.2.3264; December 8, 2008
+	- Added support for Inspect modifications starting with a plus sign followed by the modification mass, for example: S.SPATLNSR+14.V
+
+Version 1.2.3261; December 5, 2008
+	- Updated PeptideHitResultsProcessor.dll that includes event ErrorOccured
+	- Added switch /L which enables logging to a file
+		- will log any errors raised by PeptideHitResultsProcessor.dll
+
+Version 1.2.3219; October 24, 2008
+	- Updated PeptideHitResultsProcessor.dll to compute DeltaNormMQScore and DeltaNormTotalPRMScore for Inspect (these values are similar to DelCn2 for Sequest)
+
+Version 1.2.3212; October 17, 2008
+	- Additional Inspect processing updates to PeptideHitResultsProcessor.dll
+
+Version 1.2.3202; October 7, 2008
+	- New version of PeptideHitResultsProcessor.dll with expanded Inspect support
+
+Version 1.2.3199; October 4, 2008
+	- Expanded support for Inspect results files
+		- Now reads the parameter file provided to Inspect so that the modification names and masses can be determined
+		- Now reads the _PeptideToProteinMapping.txt file so that the PHRP files can include all of the proteins for each peptide
+
+Version 1.2.3191; September 26, 2008
+	- Converted solution to VB .NET 2008
+	- Added support for Inspect results files
+
+Version 1.1.3006; March 25, 2008
+	- Updates to PeptideHitResultsProcessor.dll:
+		- Added support for scan numbers specified by "MyDataset.300.300.2.dta" where "300" is the scan number
+
+Version 1.1.2991; March 10, 2008
+	- Removed SharedVBNetRoutines.dll
+
+Version 1.1.2673; April 27, 2007
+	- Updates to PeptideHitResultsProcessor.dll:
+		- Added support for scan numbers specified by "scan 1234" instead of "scan=1234" in the "description" note of the "fragment ion mass spectrum" element 
+		- Now looking for the text ":reversed" in the protein description, in addition to the protein label; if found, the protein name will end in :reversed
+
+Version 1.1.2494; October 30, 2006
+	- Updated to inform user when unable to auto-determine the format of the input file
+
+Version 1.1.2364; June 26, 2006
+	- No longer saving negative numbers in the _ModDetails.txt file or _SeqInfo.txt file for Peptide and Protein terminus static modifications
+
+Version 1.1.2322; May 11, 2006
+	- Updated the routine that parses out the scan number from the "description" note of the "fragment ion mass spectrum" element to look for the first number present if "scan=" is not present
+
+Version 1.1.2256; March 6, 2006
+	- Updated modification definition parsing routines to group modifications with the same modification mass together
+
+Version 1.1.2249; February 27, 2006
+	- Updated the default mass correction tag list
+
+Version 1.1.2245; February 23, 2006
+	- Fixed bug that failed to label reversed sequence proteins with the ":reverse" tag in the _SeqToProteinMap.txt file
+
+Version 1.1.2244; February 22, 2006
+	- Now updating static XTandem mods to dynamic XTandem mods if a dynamic mod with an identical mass is found or if the directive <note type="input" label="refine, modification mass">none</note> is present in the XTandem parameters
+
+Version 1.1.2237; February 15, 2006
+	- Updated to new version of PeptideHitResultsProcessor.dll
+		- The _SeqInfo.txt file no longer contains cleavage state and terminus state information
+		- The new version now creates files _ResultToSeqMap.txt and _SeqToProteinMap.txt in addition to _SeqInfo.txt and _ModDetails.txt
+		- The _xt.txt file no longer contains the protein name, protein expectation value, or protein intensity
+		- The _xt.txt file now includes the Multiple_Protein_Count value for each search result (0 if the peptide is in one protein, 1 if in two proteins, etc.)
+
+Version 1.0.2207; January 16, 2006
+	- Initial stable release version
+	- Supports XTandem _xt.txt files and Sequest _syn.txt and _fht.txt files
+

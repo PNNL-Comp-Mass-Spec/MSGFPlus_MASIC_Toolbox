@@ -1,0 +1,5 @@
+Modification_Symbol	Modification_Mass	Target_Residues	Modification_Type	Mass_Correction_Tag
+-	229.162933	<	S	TMT6Tag 
+-	229.162933	K	S	TMT6Tag 
+-	57.021465	C	S	IodoAcet
+*	15.994915	M	D	Plus1Oxy

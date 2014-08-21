@@ -6,5 +6,5 @@ set WorkingDirPath=.\WorkDir
 
 echo.
 @echo on
-MASICResultsMerger\MASICResultsMerger.exe %WorkingDirPath%\*_msgfdb_syn.txt /Merge
+MASICResultsMerger\MASICResultsMerger.exe %WorkingDirPath%\*_msgfdb_syn.txt /Append
 @echo off

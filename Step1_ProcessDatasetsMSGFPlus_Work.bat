@@ -89,7 +89,7 @@ Set TsvFilePath=%1\%2_msgfplus.tsv
 
 echo.
 @echo on
-"C:\Program Files\Java\jre8\bin\java.exe" -Xmx4000M -jar MSGFPlus\MSGFPlus.jar -s %MzXmlFilePath% -o %OutputFilePath% -d %3 -mod ParamFiles\MSGFDB_Mods.txt -t %ParentIonTol% -inst %MS2DetectorID% -e %EnzymeID% -ti %IsotopeErrorRange% -ntt %NTT% -tda %TDA% -minLength %MinLength% -maxLength %MaxLength% -n %NumMatchesPerSpec%
+"C:\Program Files\Java\jre8\bin\java.exe" -Xmx4000M -jar MSGFPlus\MSGFPlus.jar -s %MzXmlFilePath% -o %OutputFilePath% -d %3 -mod ParamFiles\MSGFPlus\MSGFDB_Mods.txt -t %ParentIonTol% -inst %MS2DetectorID% -e %EnzymeID% -ti %IsotopeErrorRange% -ntt %NTT% -tda %TDA% -minLength %MinLength% -maxLength %MaxLength% -n %NumMatchesPerSpec%
 @echo off
 
 If not exist %OutputFilePath% goto MSGFPlusError

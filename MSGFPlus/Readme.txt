@@ -1,5 +1,5 @@
 Requirements
-	- JRE 1.6 or greater
+	- JRE 1.6 or greater, for example JRE 8u20, available at http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 	- Main memory 2GB or greater (recommended 4GB)
 
 Installation

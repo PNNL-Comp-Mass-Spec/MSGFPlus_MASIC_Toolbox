@@ -35,7 +35,7 @@ Steps for using the toobox
    progress and check for errors
 
 7) The results file will be named FinalCombinedResults.txt and will be in the WorkDir folder
-   - You can edit Step5_Combine_MSGFPlusWithMasic_Files.bat to customize the filename
+   - You can edit Step4_MergeMSGFPlusAndMasic.bat to customize the final filename
 
 -------------------------------------------------------------------------------
 Written by Matthew Monroe for the Department of Energy (PNNL, Richland, WA)

@@ -1,4 +1,5 @@
-Download MASIC from http://omics.pnl.gov/software/MASIC
+Download MASIC from https://omics.pnl.gov/software/MASIC
+or from https://github.com/PNNL-Comp-Mass-Spec/MASIC/releases
 
 You may also need to install Thermo's MSFileReader:
 1) Download from http://sjsupport.thermofinnigan.com/public/detail.asp?id=703

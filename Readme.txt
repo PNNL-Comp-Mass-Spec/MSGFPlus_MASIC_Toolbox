@@ -19,7 +19,7 @@ corresponding folders.
 	- Used to convert .Raw files to mzXML files
 
 
-Steps for using the toobox
+Steps for using the toolbox
 1) Place the Thermo .Raw files to analyze in the WorkDir folder
 
 2) Place the desired Fasta file in the FASTA folder

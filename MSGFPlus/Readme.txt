@@ -43,11 +43,10 @@ The MzidToTsvConverter.exe program is faster and uses less memory.
     - Documentation at https://github.com/PNNL-Comp-Mass-Spec/Mzid-To-Tsv-Converter
     - Download from https://github.com/PNNL-Comp-Mass-Spec/Mzid-To-Tsv-Converter/releases
 
-For detailed documentation on MSGF+, see the "doc" subfolder, or visit:
+For detailed documentation on MS-GF+, see the "doc" subfolder, or visit:
     - GitHub repo HTML help pages: 
-      http://htmlpreview.github.io/?https://github.com/sangtaekim/msgfplus/blob/master/doc/index.html
-    - https://omics.pnl.gov/software/ms-gf
-    - https://bix-lab.ucsd.edu/pages/viewpage.action?pageId=13533355
+      https://msgfplus.github.io/msgfplus/
+    - https://htmlpreview.github.io/?https://github.com/MSGFPlus/msgfplus/blob/master/docs/index.html
 
 == Contact Information ==
 
@@ -67,7 +66,6 @@ http://www.ncbi.nlm.nih.gov/pubmed/?term=18597511
 == Updates ==
 
 https://github.com/sangtaekim/msgfplus/releases
-http://omics.pnl.gov/software/ms-gf
 
 == Source ==
 

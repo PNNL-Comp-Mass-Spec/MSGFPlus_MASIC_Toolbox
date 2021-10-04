@@ -6,16 +6,16 @@ Prior to using the toolbox you must download several programs and place them in 
 corresponding folders.
 
 - MASIC
-	http://omics.pnl.gov/software/MASIC
+	https://github.com/PNNL-Comp-Mass-Spec/MASIC
 
 - MASICResultsMerger
-	http://omics.pnl.gov/software/masic-results-merger
+	https://github.com/PNNL-Comp-Mass-Spec/MASIC-Results-Merger
 
 - PHRP
-	http://omics.pnl.gov/software/peptide-hit-results-processor
+	https://github.com/PNNL-Comp-Mass-Spec/PHRP
 
 - ProteoWizard
-	http://proteowizard.sourceforge.net/
+	https://proteowizard.sourceforge.io/
 	- Used to convert .Raw files to mzXML files
 
 
@@ -41,8 +41,8 @@ Steps for using the toobox
 Written by Matthew Monroe for the Department of Energy (PNNL, Richland, WA)
 Copyright 2014, Battelle Memorial Institute.  All Rights Reserved.
 
-E-mail: matthew.monroe@pnl.gov or matt@alchemistmatt.com
-Website: http://ncrr.pnl.gov/ or http://www.sysbio.org/resources/staff/
+E-mail: matthew.monroe@pnnl.gov or proteomics@pnnl.gov
+Website: https://github.com/PNNL-Comp-Mass-Spec/ or https://panomics.pnnl.gov/ or https://www.pnnl.gov/integrative-omics
 -------------------------------------------------------------------------------
 
 Licensed under the Apache License, Version 2.0; you may not use this file except 

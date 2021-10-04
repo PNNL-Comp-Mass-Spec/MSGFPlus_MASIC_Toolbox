@@ -1,5 +1,5 @@
 This toolbox consists of a series of Windows batch files for the automated analysis of
-Thermo .Raw files using MSGF+ and MASIC.  Following the analysis, the results are merged
+Thermo .Raw files using MS-GF+ and MASIC.  Following the analysis, the results are merged
 into a single, master result file.
 
 Prior to using the toolbox you must download several programs and place them in the 
@@ -27,7 +27,7 @@ Steps for using the toobox
 3) Edit batch file Step1_ProcessDatasetsMSGFPlus.bat to refer to the fasta file
 
 4) Edit batch file Step1_ProcessDatasetsMSGFPlus_Work.bat to customize the 
-   MSGF+ search options to use
+   MS-GF+ search options to use
 
 5) Run batch file StartMasterProcess.bat
 

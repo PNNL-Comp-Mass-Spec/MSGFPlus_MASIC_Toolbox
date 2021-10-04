@@ -1,5 +1,194 @@
 MASIC Change Log
 
+Version 3.2.7901; August 19, 2021
+	- Remove unused COM reference to MSFileReaderLib
+	- Fix bug with 16-plex TMT isotopic abundance correction coefficients
+		- Inaccurate coefficients were defined for ions 12-16
+
+Version 3.2.7762; April 2, 2021
+	- Compute reporter ion observation rates and total intensity by reporter ion channel
+	- Generate peak area and peak width histograms
+		- Supports both OxyPlot and Python plotting with matplotlib
+	- Create box and whisker plots showing the distribution of reporter ion intensities, by channel
+	- Add option /CreateParamFile for creating an example parameter file
+	- Optionally create an index.html file for viewing plots in a table
+
+Version 3.2.7645; June 9, 2020
+	- Significant speed improvements by optimizing the in-memory spectra pool
+	- Use GetColumnValue when reading a custom SIC list file
+
+Version 3.2.7438; May 13, 2020
+	- Fix a bug with the in-memory spectra pool
+		- There were certain cases where a spectrum in use might have its data replaced by a new spectrum read from the disk cache
+		- Object re-use when reading from disk no longer occurs to avoid this issue
+	- Other performance improvements
+		- Make use of a least-recently-used cache for the in-memory spectra pool
+		- Set list initial allocation size before adding content (reduces memory allocations and copies)
+		- Remove extra allocated space from lists when done adding content (reduces overall memory usage)
+
+Version 3.1.7436; May 11, 2020
+	- Optimize spectrum caching logic to improve processing speed
+
+Version 3.1.7425; April 30, 2020
+	- Convert to C#
+	- Update PRISMDatabaseUtils.dll
+
+Version 3.0.7389; March 25, 2020
+	- Build the installer using InnoSetup 6
+
+Version 3.0.7235; October 23, 2019
+	- Add Native O-GlcNAc reporter ions
+	- Sort items when populating the reporter ion mass mode combo box
+
+Version 3.0.7223; October 11, 2019
+	- Fix bug that caused the program to stop loading scan data if an empty mass spectrum was encountered
+		- Now checking for an empty list in FindMinimumPositiveValue before using .Min()
+
+Version 3.0.7219; October 7, 2019
+	- Add 16-plex TMT (aka TMTpro)
+
+Version 3.0.7083; May 24, 2019
+	- Create console only version of MASIC
+		- Progress messages now appear at the console instead of in a window
+	- Track intensities with doubles instead of floats
+	- Add support for reading .mzML files
+
+Version 2.8.6969; January 30, 2019
+	- New version of ThermoRawFileReader.dll that uses C#-based ThermoFisher.CommonCore.RawFileReader.dll
+
+Version 2.8.6848; October 1, 2018
+	- Add reporter ion mode Acetylation
+		- Looks for 126.091 m/z and 143.118 m/z
+
+Version 2.8.6760; July 5, 2018
+	- Update the TMT 11 reporter ion correction matrix
+
+Version 2.8.6715; May 21, 2018
+	- Allow for scan event "MS2 Isolation Width" to be missing for SRM scans
+
+Version 2.8.6626; February 21, 2018
+	- Add reporter ion intensity correction for TMT10 and TMT11
+	- Update masses for TMT10 to match TMT11
+
+Version 2.8.6527; November 14, 2017
+	- Retry appending to the spectrum cache
+
+Version 2.8.6520; November 7, 2017
+	- Updated ThermoRawFileReader.dll and SpectraTypeClassifier.dll
+
+Version 2.8.6507; October 25, 2017
+	- Updated ThermoRawFileReader.dll that hides events with an empty event name
+	- clsProcessFilesOrFoldersBase now inherits clsEventNotifier, resulting in new event signatures
+
+Version 2.8.6492; October 10, 2017
+	- Make clsSpectraCache Disposable, replacing bug-prone use of Finalize
+	- Use additional methods in PRISM.dll
+
+Version 2.8.6332; May 3, 2017
+	- Restore behavior of including scans with no data in _ScanStats.txt and other scan-info files
+		- GetScanData in ThermoRawFileReader is used to retrieve the m/z and intensity values for a scan
+		- Some scans have no ions, but we still want to include those scans in the _ScanStats.txt file
+	- Remove reference to PNNLOmics.dll since PRISM.dll now has class StringUtilities
+
+Version 2.8.6326; April 27, 2017
+	- The SICStats file now includes precursor ion interference score
+	- clsEventNotifier renamed to clsMasicEventNotifier and now inherits from PRISM.clsEventNotifier
+	- Converted numerous structs into classes
+
+Version 2.8.6319; April 20, 2017
+	- Update masses for TMT11 (eleven-plex TMT)
+
+Version 2.8.6303; April 4, 2017
+	- Updated OxyDataPlotter.dll
+
+Version 2.8.6300; April 1, 2017
+	- Updated the installer
+
+Version 2.8.6297; March 29, 2017
+	- New version of PRISM.dll from NuGet that includes clsParseCommandLine
+	- Replace udtFindPeaksDataType with clsPeaksContainer and clsPeakInfo
+	- Add class DatabaseTests to the test project
+	- Remove unnecessary ByRefs and use <Out()> for output parameters
+
+Version 2.8.6296; March 28, 2017
+	- Update to .NET 4.6.2
+	- Updated PRISM.dll and clsParseCommandLine.vb
+
+Version 2.7.6285; March 17, 2017
+	- Add TMT11 (eleven-plex TMT)
+
+Version 2.7.6274; March 6, 2017
+	- Update PRISM.dll and add ShFolderBrowser.dll
+
+Version 2.7.6235; January 26, 2017
+	- Write an empty XML tag for MZToleranceDaList and ScanToleranceList if the tolerances are all zero or undefined
+
+Version 2.7.6234; January 25, 2017
+	- Include SignalToNoise and Resolution for reporter ions detected in Thermo FTMS spectra
+	- Widescale refactor to reduce the size of clsMasic
+
+Version 2.6.6186; December 8, 2016
+	- Converted several structs into classes
+	- Now creating a _SICstats.txt file with placeholder values for datasets that only have MS2 data
+
+Version 2.6.6033; July 8, 2016
+	- Updated MSDataFileReader.dll, PRISM.dll, and SpectraTypeClassifier.dll
+	- Updated to .NET 4.5.1
+
+Version 2.6.6008; June 13, 2016
+	-  Replace VB.NET ThermoRawFileReader with C# ThermoRawFileReader
+
+Version 2.6.5941; April 7, 2016
+	- Added three new reporter ion modes
+		- FSFACustomCarbonyl:    171.104, 236.074, 157.088 m/z
+		- FSFACustomCarboxylic:  171.104, 234.058, 336.174 m/z
+		- FSFACustomHydroxyl:    151.063 and 166.087 m/z
+
+Version 2.6.5893; February 19, 2016
+	- Update the masses for  reporter ion mode FrackingAmine20160217
+		- Now: 157.089, 170.097, and 234.059 m/z
+
+Version 2.6.5891; February 17, 2016
+	- Added reporter ion mode FrackingAmine20160217
+		- Looks for 170.09 m/z, 172.08 m/z, and 252.07 m/z
+
+Version 2.6.5856; January 13, 2016
+	- Updated ThermoRawFileReader with improved scan filter handling
+	- Imported namespace System.IO
+
+Version 2.6.5854; January 11, 2016
+	- Updated ThermoRawFileReader that supports Thermo Lumos scan filters of the form 902.5721@etd120.55@cid20.00
+		- etd followed by cid is labeled ETciD
+		- etd followed by hcd is labeled EThcD
+
+Version 2.6.5843; December 31, 2015
+	- Removed Console.Writeline debug statements (resulted in exceptions for datasets that only have MS2 spectra)
+
+Version 2.6.5829; December 17, 2015
+	- Fixed bug tracking data used to create files _ScanStatsEx.txt and _ScanStatsConstant.txt
+	- Updated defaults to use a parent ion tolerance of 10 ppm instead of 0.6 Da
+	- Replaced hashtables with Dictionaries
+
+Version 2.6.5679; July 20, 2015
+	- Enabled visual styles to give rounded buttons and text boxes in the main window
+
+Version 2.6.5596; April 28, 2015
+	- Fix storing of custom m/z search mass tolerance values in the XML file
+
+Version 2.6.5595; April 27, 2015
+	- No longer creating an ICR-2LS compatible .tic file
+	- Fix bugs saving/loading custom search tolerances for custom m/z values
+
+Version 2.6.5549; March 12, 2015
+	- Increased default cache settings to a maximum of 5000 spectra and 3 GB of memory
+	- Now compiling as AnyCPU by default
+
+Version 2.6.5500; January 22, 2015
+	- New version of ThermoRawFileReaderDLL that handles exceptions thrown by corrupt spectra
+
+Version 2.6.5421; November 4, 2014
+	- Fix logic in AddCustomSICValues that finds the nearest MS2 spectrum for a given custom m/z value
+
 Version 2.6.5331; August 6, 2014
 	- Fixed bug in CompressSpectraData when checking for reporter ion m/z values, which should not be merged with neighboring data within the search resolution
 	- Changed default value for SpectrumSimilarityMinimum from 0.7 to 0.8

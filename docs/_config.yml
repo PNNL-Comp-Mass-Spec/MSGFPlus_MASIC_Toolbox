@@ -1,0 +1,4 @@
+# Jekyll configuration
+name: MSGFPlus_MASIC_Toolbox
+description: DataProcessing toolbox for running MSGF+ and MASIC, then merging the results. Uses Windows batch files to automate the process for a folder of Thermo .Raw files
+url: https://pnnl-comp-mass-spec.github.io/MSGFPlus_MASIC_Toolbox/
